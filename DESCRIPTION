@@ -10,3 +10,4 @@ Suggests:
     roxygen2
 Collate:
     'downloader-package.r'
+    'download.r'
