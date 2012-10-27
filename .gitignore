@@ -1,0 +1,4 @@
+.Rbuildignore
+*.sublime-project
+*.sublime-workspace
+.Rproj.user
