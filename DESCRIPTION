@@ -1,13 +1,14 @@
 Package: downloader
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Author: winston
-Version: 1.0
-License: GPL-3
-Title: 
-Description: 
-Suggests:
-    testthat,
-    roxygen2
+Maintainer: Winston Chang <winston@stdout.org>
+Author: Winston Chang <winston@stdout.org>
+Version: 0.1
+License: GPL-2
+Title: A package for downloading files over https
+Description: This package provides a wrapper for the download.file function,
+    making it possible to download files over https on Windows, Mac OS X, and
+    other Unix-like platforms. The RCurl package provides this functionality
+    (and much more) but can be difficult to install because it must be compiled
+    with external dependencies. This package is much easier to install.
 Collate:
     'downloader-package.r'
     'download.r'
