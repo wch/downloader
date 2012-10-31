@@ -13,6 +13,9 @@
 #' then \code{lynx} to download the file. Typically, Linux platforms will have
 #' \code{wget} installed, and Mac OS X will have \code{curl}.
 #'
+#' Note that for many (perhaps most) types of files, you will want to use
+#' \code{mode="wb"} so that the file is downloaded in binary mode.
+#'
 #' @param url The URL to download.
 #' @param ... Other arguments that are passed to \code{\link{download.file}}.
 #'
@@ -22,7 +25,9 @@
 #' @export
 #' @examples
 #' \dontrun{
-#' download("https://raw.github.com/gist/3961317/28bea6e63ec295a452486cbc36afb62a3ddad878/download.r", "download.r")
+#' # Download the downloader source, in binary mode
+#' download("https://github.com/wch/downloader/zipball/master",
+#'          "downloader.zip", mode = "wb")
 #' }
 #'
 download <- function(url, ...) {
