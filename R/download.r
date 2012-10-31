@@ -49,9 +49,9 @@ download <- function(url, ...) {
       # If non-Windows, check for curl/wget/lynx, then call download.file with
       # appropriate method.
 
-      if (system("wget --help", ignore.stdout=TRUE, ignore.stderr=TRUE) == 0L) {
+      if (nzchar(Sys.which("wget")[1])) {
         method <- "wget"
-      } else if (system("curl --help", ignore.stdout=TRUE, ignore.stderr=TRUE) == 0L) {
+      } else if (nzchar(Sys.which("curl")[1])) {
         method <- "curl"
 
         # curl needs to add a -L option to follow redirects.
@@ -61,7 +61,7 @@ download <- function(url, ...) {
 
         options(download.file.extra = paste("-L", orig_extra_options))
 
-      } else if (system("lynx -help", ignore.stdout=TRUE, ignore.stderr=TRUE) == 0L) {
+      } else if (nzchar(Sys.which("lynx")[1])) {
         method <- "lynx"
       } else {
         stop("no download method found")
