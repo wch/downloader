@@ -1,0 +1,6 @@
+Version 0.1.99
+--------------------------------------------------------------------------------
+
+* Switched to using `Sys.which` to find external programs.
+
+* Added tests.
