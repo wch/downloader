@@ -1,0 +1,5 @@
+.gitignore
+downloader.sublime-project
+downloader.sublime-workspace
+^.*\.Rproj$
+^\.Rproj\.user$
