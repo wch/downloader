@@ -10,6 +10,8 @@ Description: This package provides a wrapper for the download.file function,
     (and much more) but can be difficult to install because it must be compiled
     with external dependencies. This package has no external dependencies, so
     it is much easier to install.
+Suggests:
+    testthat
 Collate:
     'downloader-package.r'
     'download.r'
