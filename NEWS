@@ -1,6 +1,8 @@
-Version 0.1.99
+Version 0.2
 --------------------------------------------------------------------------------
 
 * Switched to using `Sys.which` to find external programs.
 
 * Added tests.
+
+* When using curl, follow redirects with http. (It already worked with https.)
