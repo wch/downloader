@@ -42,10 +42,11 @@ download <- function(url, ...) {
 
       # Store initial settings, and restore on exit
       internet2_start <- seti2(NA)
-      on.exit(seti2(internet2_start))
+      on.exit(suppressWarnings(seti2(internet2_start)))
 
-      # Needed for https
-      seti2(TRUE)
+      # Needed for https. Will get warning if setInternet2(FALSE) already run
+      # and internet routines are used. But the warnings don't seem to matter.
+      suppressWarnings(seti2(TRUE))
       download.file(url, ...)
 
     } else {
