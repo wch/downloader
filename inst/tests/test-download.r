@@ -16,18 +16,26 @@ download_result <- function(url) {
 }
 
 
-test_that("downloading https works properly", {
+test_that("downloading http and https works properly", {
+  # Download http from httpbin.org
+  result <- download_result("http://httpbin.org/ip")
+  # Check that it has the string "origin" in the text
+  expect_true(grepl("origin", result))
+
   # Download https from httpbin.org
   result <- download_result("https://httpbin.org/ip")
-
   # Check that it has the string "origin" in the text
   expect_true(grepl("origin", result))
 })
 
 test_that("follows redirects", {
+  # Download http redirect from httpbin.org
+  result <- download_result("http://httpbin.org/redirect/3")
+  # Check that it has the string "origin" in the text
+  expect_true(grepl("origin", result))
+
   # Download https redirect from httpbin.org
   result <- download_result("https://httpbin.org/redirect/3")
-
   # Check that it has the string "origin" in the text
   expect_true(grepl("origin", result))
 })

@@ -31,8 +31,8 @@
 #' }
 #'
 download <- function(url, ...) {
-  # First, check protocol. If https, check platform:
-  if (grepl('^https://', url)) {
+  # First, check protocol. If http or https, check platform:
+  if (grepl('^https?://', url)) {
 
     # If Windows, call setInternet2, then use download.file with defaults.
     if (.Platform$OS.type == "windows") {
