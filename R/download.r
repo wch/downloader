@@ -37,12 +37,15 @@ download <- function(url, ...) {
     # If Windows, call setInternet2, then use download.file with defaults.
     if (.Platform$OS.type == "windows") {
 
+      # If we directly use setInternet2, R CMD CHECK gives a Note on Mac/Linux
+      seti2 <- `::`(utils, 'setInternet2')
+
       # Store initial settings, and restore on exit
-      internet2_start <- setInternet2(NA)
-      on.exit(setInternet2(internet2_start))
+      internet2_start <- seti2(NA)
+      on.exit(seti2(internet2_start))
 
       # Needed for https
-      setInternet2(TRUE)
+      seti2(TRUE)
       download.file(url, ...)
 
     } else {
