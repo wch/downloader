@@ -16,3 +16,4 @@ Suggests:
 Collate:
     'download.r'
     'downloader-package.r'
+    'source_url.r'
