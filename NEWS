@@ -6,3 +6,5 @@ Version 0.2
 * Added tests.
 
 * When using curl, follow redirects with http. (It already worked with https.)
+
+* Add `source_url` function.
