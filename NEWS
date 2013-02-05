@@ -1,3 +1,9 @@
+Version 0.2.1
+--------------------------------------------------------------------------------
+
+* Change https redirection test to not run on CRAN because their Windows build
+  machine has more stringent security settings.
+
 Version 0.2
 --------------------------------------------------------------------------------
 
