@@ -5,6 +5,10 @@
 #' some settings to make it work. How exactly the settings are changed
 #' differs among platforms.
 #'
+#' This function also should follow http redirects on all platforms, which is
+#' something that does not happen by default when \code{curl} is used, as on
+#' Mac OS X.
+#'
 #' With Windows, it calls \code{setInternet2}, which tells R to use the
 #' \code{internet2.dll}. Then it downloads the file by calling
 #' \code{\link{download.file}} using the \code{"internal"} method.
