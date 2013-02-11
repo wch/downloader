@@ -1,7 +1,7 @@
 Package: downloader
 Maintainer: Winston Chang <winston@stdout.org>
 Author: Winston Chang <winston@stdout.org>
-Version: 0.2.1
+Version: 0.2.2
 License: GPL-2
 Title: A package for downloading files over http and https
 Description: This package provides a wrapper for the download.file function,

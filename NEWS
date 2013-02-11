@@ -1,3 +1,9 @@
+Version 0.2.2
+--------------------------------------------------------------------------------
+
+* Disable all network tests when running on CRAN, because the connection to the
+ remote test website may not be reliable.
+
 Version 0.2.1
 --------------------------------------------------------------------------------
 
