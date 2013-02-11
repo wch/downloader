@@ -15,6 +15,10 @@ download_result <- function(url) {
   dl_text
 }
 
+# CRAN has intermittent problems with these tests, since they rely on a
+# particular website being accessible. This makes it run with devtools::test()
+# but not on CRAN
+if (Sys.getenv('NOT_CRAN') == "true") {
 
 test_that("downloading http and https works properly", {
   # Download http from httpbin.org
@@ -34,13 +38,10 @@ test_that("follows redirects", {
   # Check that it has the string "origin" in the text
   expect_true(grepl("origin", result))
 
-  # CRAN has a problem with this test on Windows, probably due to a security
-  # setting on their particular machine. This makes it run with devtools::test()
-  # but not on CRAN
-  if (Sys.getenv('NOT_CRAN') == "true") {
-    # Download https redirect from httpbin.org
-    result <- download_result("https://httpbin.org/redirect/3")
-    # Check that it has the string "origin" in the text
-    expect_true(grepl("origin", result))
-  }
+  # Download https redirect from httpbin.org
+  result <- download_result("https://httpbin.org/redirect/3")
+  # Check that it has the string "origin" in the text
+  expect_true(grepl("origin", result))
 })
+
+}
