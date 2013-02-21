@@ -34,7 +34,7 @@
 #' @examples
 #' \dontrun{
 #' # Source the a sample file
-#' source_url("https://gist.github.com/wch/dae7c106ee99fe1fdfe7/raw/db0c9bfe0de85d15c60b0b9bf22403c0f5e1fb15/test.r",
+#' downloader::source_url("https://gist.github.com/wch/dae7c106ee99fe1fdfe7/raw/db0c9bfe0de85d15c60b0b9bf22403c0f5e1fb15/test.r",
 #'   sha="9b8ff5213e32a871d6cb95cce0bed35c53307f61")
 #' }
 #'

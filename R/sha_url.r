@@ -16,7 +16,7 @@
 #' # the hash as a string
 #' sha_url("https://gist.github.com/wch/dae7c106ee99fe1fdfe7/raw/db0c9bfe0de85d15c60b0b9bf22403c0f5e1fb15/test.r")
 #' # Command for sourcing the URL:
-#' #  source_url("https://gist.github.com/wch/dae7c106ee99fe1fdfe7/raw/db0c9bfe0de85d15c60b0b9bf22403c0f5e1fb15/test.r", sha="9b8ff5213e32a871d6cb95cce0bed35c53307f61")
+#' #  downloader::source_url("https://gist.github.com/wch/dae7c106ee99fe1fdfe7/raw/db0c9bfe0de85d15c60b0b9bf22403c0f5e1fb15/test.r", sha="9b8ff5213e32a871d6cb95cce0bed35c53307f61")
 #' # [1] "9b8ff5213e32a871d6cb95cce0bed35c53307f61"
 #' }
 #'
@@ -31,7 +31,7 @@ sha_url <- function(url, cmd = TRUE) {
 
   if (cmd) {
     message('Command for sourcing the URL:\n',
-      '  source_url("', url, '", sha="', sha, '")')
+      '  downloader::source_url("', url, '", sha="', sha, '")')
   }
 
   sha
