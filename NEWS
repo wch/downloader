@@ -1,3 +1,10 @@
+Version 0.2.2.99
+--------------------------------------------------------------------------------
+
+* `source_url()` function now checks the SHA-1 hash the downloaded file.
+
+* Add `sha_url()` function, for finding the SHA-1 hash of a remote file.
+
 Version 0.2.2
 --------------------------------------------------------------------------------
 
