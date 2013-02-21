@@ -51,6 +51,7 @@ source_url <- function(url, sha = NULL, ..., prompt = TRUE, quiet = FALSE) {
       sha <- NULL  # Set to NULL for simpler check later on
 
       if (tolower(resp) != "y") {
+        message("Quitting")
         return(invisible())
       }
     }
