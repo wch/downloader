@@ -2,23 +2,55 @@
 \alias{source_url}
 \title{Download an R file from a URL and source it}
 \usage{
-  source_url(url, ...)
+  source_url(url, sha = NULL, ..., prompt = TRUE,
+    quiet = FALSE)
 }
 \arguments{
   \item{url}{The URL to download.}
+
+  \item{sha}{A SHA-1 hash of the file at the URL.}
+
+  \item{prompt}{Prompt the user if no value for \code{sha}
+  is provided.}
+
+  \item{quiet}{If \code{FALSE} (the default), print out
+  status messages about checking SHA.}
 
   \item{...}{Other arguments that are passed to
   \code{\link{source}()}.}
 }
 \description{
   This will download a file and source it. Because it uses
-  the \code{\link{download}} function, it can handle https
-  URLs.
+  the \code{\link{download}()} function, it can handle
+  https URLs.
+}
+\details{
+  By default, \code{source_url()} checks the SHA-1 hash of
+  the file. If it differs from the expected value, it will
+  throw an error. The default expectation is that a hash is
+  provided; if not, \code{source_url()} will prompt the
+  user, asking if they are sure they want to continue,
+  unless code{prompt=FALSE} is used.
+
+  The purpose of checking the hash is to ensure that the
+  file has not changed. If a \code{source_url} command with
+  a hash is posted in a public forum, then others who
+  source the URL (with the hash) are guaranteed to run the
+  same code every time. This means that the author doesn't
+  need to worry about the security of the server hosting
+  the file. It also means that the users don't have to
+  worry about the file being replaced with a damaged or
+  maliciously-modified version.
+
+  To find the hash of a local file, use
+  \code{\link{digest}()}. For a simple way to find the hash
+  of a remote file, use \code{\link{sha_url}()}.
 }
 \examples{
 \dontrun{
-# Source the download.r file from the downloader package
-source_url("https://raw.github.com/wch/downloader/master/R/download.r")
+# Source the a sample file
+source_url("https://gist.github.com/wch/dae7c106ee99fe1fdfe7/raw/db0c9bfe0de85d15c60b0b9bf22403c0f5e1fb15/test.r",
+  sha="9b8ff5213e32a871d6cb95cce0bed35c53307f61")
 }
 }
 \seealso{

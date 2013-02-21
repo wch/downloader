@@ -11,9 +11,12 @@ Description: This package provides a wrapper for the download.file function,
     with external dependencies. This package has no external dependencies, so
     it is much easier to install.
 URL: https://github.com/wch/downloader
+Imports:
+    digest
 Suggests:
     testthat
 Collate:
     'download.r'
     'downloader-package.r'
     'source_url.r'
+    'sha_url.r'
