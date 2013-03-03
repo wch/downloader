@@ -25,7 +25,7 @@
 sha_url <- function(url, cmd = TRUE) {
   temp_file <- tempfile()
   download(url, temp_file)
-  on.exit(rm(temp_file))
+  on.exit(unlink(temp_file))
 
   sha <- digest(file = temp_file, algo = 'sha1')
 

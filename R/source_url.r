@@ -58,7 +58,7 @@ source_url <- function(url, sha = NULL, ..., prompt = TRUE, quiet = FALSE) {
 
     temp_file <- tempfile()
     download(url, temp_file)
-    on.exit(rm(temp_file))
+    on.exit(unlink(temp_file))
 
     if (!is.null(sha)) {
       url_sha <- digest(file = temp_file, algo = 'sha1')
