@@ -1,4 +1,4 @@
-Version 0.2.2.99
+Version 0.3
 --------------------------------------------------------------------------------
 
 * `source_url()` function now checks the SHA-1 hash the downloaded file.
