@@ -30,7 +30,9 @@
   throw an error. The default expectation is that a hash is
   provided; if not, \code{source_url()} will prompt the
   user, asking if they are sure they want to continue,
-  unless code{prompt=FALSE} is used.
+  unless \code{prompt=FALSE} is used. In other words, if
+  you use \code{prompt=FALSE}, it will run the remote code
+  without checking the hash, and without asking the user.
 
   The purpose of checking the hash is to ensure that the
   file has not changed. If a \code{source_url} command with
@@ -49,7 +51,7 @@
 \examples{
 \dontrun{
 # Source the a sample file
-source_url("https://gist.github.com/wch/dae7c106ee99fe1fdfe7/raw/db0c9bfe0de85d15c60b0b9bf22403c0f5e1fb15/test.r",
+downloader::source_url("https://gist.github.com/wch/dae7c106ee99fe1fdfe7/raw/db0c9bfe0de85d15c60b0b9bf22403c0f5e1fb15/test.r",
   sha="9b8ff5213e32a871d6cb95cce0bed35c53307f61")
 }
 }

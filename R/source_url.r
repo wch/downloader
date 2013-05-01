@@ -7,7 +7,9 @@
 #' differs from the expected value, it will throw an error. The default
 #' expectation is that a hash is provided; if not, \code{source_url()} will
 #' prompt the user, asking if they are sure they want to continue, unless
-#' code{prompt=FALSE} is used.
+#' \code{prompt=FALSE} is used. In other words, if you use \code{prompt=FALSE},
+#' it will run the remote code without checking the hash, and without asking
+#' the user.
 #'
 #' The purpose of checking the hash is to ensure that the file has not changed.
 #' If a \code{source_url} command with a hash is posted in a public forum, then
