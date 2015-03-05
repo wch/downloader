@@ -1,4 +1,5 @@
 export(download)
 export(sha_url)
 export(source_url)
+export(download_cached)
 importFrom(digest,digest)
