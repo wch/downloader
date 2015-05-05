@@ -15,8 +15,4 @@ Imports:
     digest
 Suggests:
     testthat
-Collate:
-    'download.r'
-    'downloader-package.r'
-    'source_url.r'
-    'sha_url.r'
+BugReports: https://github.com/wch/downloader/issues
