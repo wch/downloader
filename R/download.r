@@ -35,6 +35,7 @@
 #'          "downloader.zip", mode = "wb")
 #' }
 #'
+#' @importFrom utils download.file
 download <- function(url, ...) {
   # First, check protocol. If http or https, check platform:
   if (grepl('^https?://', url)) {

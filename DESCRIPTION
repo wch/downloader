@@ -12,6 +12,7 @@ Description: Provides a wrapper for the download.file function,
     it is much easier to install.
 URL: https://github.com/wch/downloader
 Imports:
+    utils,
     digest
 Suggests:
     testthat
