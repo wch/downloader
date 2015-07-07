@@ -14,21 +14,22 @@ download(url, ...)
 \description{
 This is a wrapper for \code{\link{download.file}} and takes all the same
 arguments. The only difference is that, if the protocol is https, it changes
-some settings to make it work. How exactly the settings are changed
-differs among platforms.
+some settings to make it work. How exactly the settings are changed differs
+among platforms.
 }
 \details{
 This function also should follow http redirects on all platforms, which is
-something that does not happen by default when \code{curl} is used, as on
-Mac OS X.
+something that does not happen by default when \code{curl} is used, as on Mac
+OS X.
 
-With Windows, it calls \code{setInternet2}, which tells R to use the
-\code{internet2.dll}. Then it downloads the file by calling
-\code{\link{download.file}} using the \code{"internal"} method.
+With Windows, it either uses the \code{"wininet"} method (for R 3.2) or uses
+the \code{"internal"} method after first ensuring that \code{setInternet2},
+is active (which tells R to use the \code{internet2.dll}).
 
-On other platforms, it will try to use \code{wget}, then \code{curl}, and
-then \code{lynx} to download the file. Typically, Linux platforms will have
-\code{wget} installed, and Mac OS X will have \code{curl}.
+On other platforms, it will try to use \code{libcurl}, \code{wget}, then
+\code{curl}, and then \code{lynx} to download the file. R 3.2 will typically
+have the \code{libcurl} method and for previous versions of R Linux platforms
+will have \code{wget} installed, and Mac OS X will have \code{curl}.
 
 Note that for many (perhaps most) types of files, you will want to use
 \code{mode="wb"} so that the file is downloaded in binary mode.
