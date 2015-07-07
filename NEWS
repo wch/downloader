@@ -1,4 +1,4 @@
-Version 0.4 (unreleased)
+Version 0.3.0.9001
 --------------------------------------------------------------------------------
 
 * Use new R 3.2 download methods ("wininet" and "libcurl") when available.
