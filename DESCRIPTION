@@ -1,9 +1,9 @@
 Package: downloader
 Maintainer: Winston Chang <winston@stdout.org>
 Author: Winston Chang <winston@stdout.org>
-Version: 0.3.0.9001
+Version: 0.4
 License: GPL-2
-Title: Download files over HTTP and HTTPS
+Title: Download Files over HTTP and HTTPS
 Description: Provides a wrapper for the download.file function,
     making it possible to download files over HTTPS on Windows, Mac OS X, and
     other Unix-like platforms. The 'RCurl' package provides this functionality

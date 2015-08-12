@@ -37,11 +37,16 @@
 #' @examples
 #' \dontrun{
 #' # Source the a sample file
-#' downloader::source_url("https://gist.github.com/wch/dae7c106ee99fe1fdfe7/raw/db0c9bfe0de85d15c60b0b9bf22403c0f5e1fb15/test.r",
-#'   sha="9b8ff5213e32a871d6cb95cce0bed35c53307f61")
+#'
+#' # This is a very long URL; break it up so it can be seen more easily in the
+#' # examples.
+#' test_url <- paste0("https://gist.github.com/wch/dae7c106ee99fe1fdfe7",
+#'                    "/raw/db0c9bfe0de85d15c60b0b9bf22403c0f5e1fb15/test.r")
+#' downloader::source_url(test_url,
+#'                        sha = "9b8ff5213e32a871d6cb95cce0bed35c53307f61")
 #'
 #' # Find the hash of a file
-#' downloader::sha_url("https://gist.github.com/wch/dae7c106ee99fe1fdfe7/raw/db0c9bfe0de85d15c60b0b9bf22403c0f5e1fb15/test.r")
+#' downloader::sha_url(test_url)
 #' }
 #'
 #'
