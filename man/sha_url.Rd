@@ -14,7 +14,7 @@ URL with \code{\link{source_url}()}, including the hash.}
 }
 \description{
 This will download a file and find a SHA-1 hash of it, using
-\code{\link{digest}()}. The primary purpose of this function is to provide
+\code{\link[digest]{digest}()}. The primary purpose of this function is to provide
 an easy way to find the value of \code{sha} which can be passed to
 \code{\link{source_url}()}.
 }
