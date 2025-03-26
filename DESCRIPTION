@@ -1,5 +1,4 @@
 Package: downloader
-Maintainer: Winston Chang <winston@stdout.org>
 Authors@R: person(given = "Winston",
     family = "Chang",
     role = c("aut", "cre"),
