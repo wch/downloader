@@ -21,3 +21,7 @@ Useful links:
 }
 
 }
+\author{
+\strong{Maintainer}: Winston Chang \email{winston@stdout.org}
+
+}

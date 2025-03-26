@@ -1,6 +1,9 @@
 Package: downloader
 Maintainer: Winston Chang <winston@stdout.org>
-Author: Winston Chang <winston@stdout.org>
+Authors@R: person(given = "Winston",
+    family = "Chang",
+    role = c("aut", "cre"),
+    email = "winston@stdout.org")
 Version: 0.4.1
 License: GPL-2
 Title: Download Files over HTTP and HTTPS
