@@ -8,5 +8,4 @@
 #' it is much easier to install.
 #'
 #' @name downloader
-#' @docType package
-NULL
+"_PACKAGE"
