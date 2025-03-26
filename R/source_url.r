@@ -19,7 +19,7 @@
 #' have to worry about the file being replaced with a damaged or
 #' maliciously-modified version.
 #'
-#' To find the hash of a local file, use \code{\link{digest}()}. For a simple
+#' To find the hash of a local file, use \code{\link[digest]{digest}()}. For a simple
 #' way to find the hash of a remote file, use \code{\link{sha_url}()}.
 #'
 #' @param url The URL to download.
