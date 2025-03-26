@@ -17,3 +17,4 @@ Imports:
 Suggests:
     testthat
 BugReports: https://github.com/wch/downloader/issues
+RoxygenNote: 7.3.2
